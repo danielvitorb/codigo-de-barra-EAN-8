@@ -1,20 +1,20 @@
-# Leitor e Gerador de Códigos de Barras em C (PBM)
+# 🧾 Gerador e Leitor de Códigos de Barras EAN-8 (PBM) em C
 
-Este projeto contém dois programas em C (`gerar.c` e `extrair.c`) capazes de **gerar imagens PBM com códigos de barras** e **extrair identificadores a partir dessas imagens**. Ambos compartilham funcionalidades comuns através do arquivo `compartilhado.h`.
+Este projeto implementa dois programas em C para **gerar** e **extrair** imagens de **códigos de barras EAN-8** no formato **PBM (Portable Bitmap)**.
 
 ---
 
-## 📂 Estrutura do Projeto
+## 📁 Estrutura do Projeto
 
-- `gerar.c`: Gera uma imagem `.pbm` com um código de barras a partir de um identificador numérico.
-- `extrair.c`: Lê uma imagem `.pbm` e extrai o identificador contido no código de barras.
-- `compartilhado.h`: Arquivo com structs e funções compartilhadas entre os dois programas.
+- `gerar.c`: Gera uma imagem `.pbm` contendo um código de barras EAN-8 a partir de um identificador numérico.
+- `extrair.c`: Lê uma imagem `.pbm`, verifica se há um código de barras EAN-8 e extrai o identificador, se possível.
+- `compartilhado.h`: Define structs e funções auxiliares utilizadas por ambos os programas, incluindo manipulação de imagem e validação de identificadores.
 
 ---
 
 ## 🔧 Compilação
 
-Use `gcc` para compilar:
+Use `gcc` para compilar os arquivos:
 
 ```bash
 gcc gerar.c -o gerar
